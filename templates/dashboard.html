@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="text-primary">Gerencie suas finanças com facilidade.</h2>
+
+<div class="row">
+    <div class="last-budget">
+        <h3>Último Orçamento</h3>
+        {% if last_expense %}
+            <p>Última despesa: <strong>{{ last_expense.category }}</strong> - R$ {{ "%.2f"|format(last_expense.amount) }} em {{ last_expense.created_at.strftime('%d/%m/%Y') }}</p>
+        {% else %}
+            <p>Nenhum orçamento registrado ainda.</p>
+        {% endif %}
+    </div>    
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6 text-center">
+        <div class="dashboard-card">
+            <img src="{{ url_for('static', filename='img/budget.png') }}" width="100">
+            <p class="card-text">Gerencie seus orçamentos mensais</p>
+            <a href="{{ url_for('budgets.budgets') }}" class="dashboard-btn">Criar Orçamento</a>
+        </div>
+    </div>
+    <div class="col-md-6 text-center">
+        <div class="dashboard-card">
+            <img src="{{ url_for('static', filename='img/reports.png') }}" width="100">
+            <p class="card-text">Visualize seus relatórios financeiros</p>
+            <a href="{{ url_for('reports.reports') }}" class="dashboard-btn">Ver Relatórios</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

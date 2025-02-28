@@ -1,0 +1,231 @@
+:root {
+    --primary-color: #6A0DAD;
+    --secondary-color: #FFA500;
+    --background-color: #F8F9FA;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.auth-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.auth-container h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.auth-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.auth-container p {
+    margin-top: 10px;
+}
+
+.auth-container a {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.auth-container a:hover {
+    color: var(--secondary-color);
+}
+
+.dashboard-card {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 300px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.dashboard-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-card img {
+    display: block;
+    margin: 0 auto 10px;
+    width: 80px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.dashboard-card:hover img {
+    transform: scale(1.1);
+}
+
+.dashboard-card .dashboard-btn {
+    display: block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.dashboard-card .dashboard-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.last-budget {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.last-budget p {
+    font-size: 18px;
+    color: #333;
+}
+
+.reports-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.reports-container h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.report-filters {
+    margin-bottom: 20px;
+}
+
+.report-filters a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.report-filters a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.report-total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.expense-list {
+    list-style: none;
+    padding: 0;
+}
+
+.expense-list li {
+    background: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.expense-list li:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.expense-category {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.expense-amount {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.expense-date {
+    color: #777;
+    font-size: 0.9rem;
+}

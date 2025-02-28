@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="reports-container">
+    <h2>Relatório Financeiro</h2>
+
+    <div class="report-filters">
+        <p>Filtrar por:</p>
+        <a href="{{ url_for('reports.reports', filter='all') }}">Tudo</a> |
+        <a href="{{ url_for('reports.reports', filter='day') }}">Hoje</a> |
+        <a href="{{ url_for('reports.reports', filter='month') }}">Este Mês</a> |
+        <a href="{{ url_for('reports.reports', filter='year') }}">Este Ano</a>
+    </div>
+
+    <p class="report-total"><strong>Total gasto ({{ filter_option }}):</strong> R$ {{ total }}</p>
+
+    <ul class="expense-list">
+        {% for expense in expenses %}
+        <li>
+            <span class="expense-category">{{ expense.category }}</span>
+            <span class="expense-amount">R$ {{ expense.amount }}</span>
+            <span class="expense-date">{{ expense.created_at.strftime('%d/%m/%Y') }}</span>
+        </li>
+        {% else %}
+        <li class="no-expenses">Nenhuma despesa encontrada.</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
